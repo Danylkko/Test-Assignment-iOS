@@ -22,6 +22,7 @@
 		79355DA12A7304FC00FF18CD /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79355D9F2A7304FC00FF18CD /* CardTableViewCell.xib */; };
 		79355DA32A7307FE00FF18CD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355DA22A7307FE00FF18CD /* DataManager.swift */; };
 		7981709E2A73184200DFF117 /* CardViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981709D2A73184200DFF117 /* CardViewCoordinator.swift */; };
+		798170A02A732CFC00DFF117 /* MainCoordinator+NavControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981709F2A732CFC00DFF117 /* MainCoordinator+NavControllerDelegate.swift */; };
 		79F2F3002A72C17800801669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F2FF2A72C17800801669 /* AppDelegate.swift */; };
 		79F2F3022A72C17800801669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F3012A72C17800801669 /* SceneDelegate.swift */; };
 		79F2F3042A72C17800801669 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F3032A72C17800801669 /* MainViewController.swift */; };
@@ -49,6 +50,7 @@
 		79355D9F2A7304FC00FF18CD /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		79355DA22A7307FE00FF18CD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7981709D2A73184200DFF117 /* CardViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCoordinator.swift; sourceTree = "<group>"; };
+		7981709F2A732CFC00DFF117 /* MainCoordinator+NavControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinator+NavControllerDelegate.swift"; sourceTree = "<group>"; };
 		79F2F2FC2A72C17800801669 /* Test-Assignment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Assignment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F2F2FF2A72C17800801669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F2F3012A72C17800801669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				79355D842A72C71900FF18CD /* MainViewController+UITableViewDelegate.swift */,
 				79355D9E2A7304FC00FF18CD /* CardTableViewCell.swift */,
 				79355D9F2A7304FC00FF18CD /* CardTableViewCell.xib */,
+				7981709F2A732CFC00DFF117 /* MainCoordinator+NavControllerDelegate.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F2F3142A72C26900801669 /* Coordinator.swift in Sources */,
+				798170A02A732CFC00DFF117 /* MainCoordinator+NavControllerDelegate.swift in Sources */,
 				79F2F3042A72C17800801669 /* MainViewController.swift in Sources */,
 				79355D892A72D61D00FF18CD /* DebitCard.swift in Sources */,
 				79F2F3002A72C17800801669 /* AppDelegate.swift in Sources */,

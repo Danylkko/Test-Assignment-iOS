@@ -22,6 +22,7 @@ class CardViewCoordinator: Coordinator {
     
     func start() {
         let vc = CardViewController.instantiate()
+        vc.coordinator = self
         let vm = CardViewModel(card: card)
         vc.cardView = CardView(viewModel: vm)
         navigationController.pushViewController(vc, animated: true)
