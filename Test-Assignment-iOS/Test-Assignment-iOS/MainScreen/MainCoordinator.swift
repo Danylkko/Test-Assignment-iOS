@@ -24,6 +24,11 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         navigationController.delegate = self
         let vc = MainViewController.instantiate()
         vc.coordinator = self
+        
+        vc.onNavigationBarButtonTap = { [weak self] in
+            
+        }
+        
         navigationController.pushViewController(vc, animated: false)
     }
     
