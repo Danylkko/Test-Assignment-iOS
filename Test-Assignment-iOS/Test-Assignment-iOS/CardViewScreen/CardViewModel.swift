@@ -30,6 +30,21 @@ class CardViewModel {
         "Bank"
     }
     
+    var bankNameColor: UIColor {
+        .white
+    }
+    
+    var cardNumberColor: UIColor {
+        switch card.brand {
+        case .mastercard:
+            return UIColor(hex: "#222222")
+        case .visa:
+            return UIColor(hex: "#faaa13")
+        default:
+            return .clear
+        }
+    }
+    
     var brandLogo: UIImage? {
         switch card.brand {
         case .visa:

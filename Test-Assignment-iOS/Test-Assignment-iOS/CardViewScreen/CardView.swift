@@ -35,7 +35,9 @@ class CardView: UIView {
     override func draw(_ rect: CGRect) {
         // Drawing code
         bankNameLabel.text = viewModel?.bankName
+        bankNameLabel.textColor = viewModel?.bankNameColor
         cardNumberLabel.text = viewModel?.cardNumber
+        cardNumberLabel.textColor = viewModel?.cardNumberColor
         brandLogoView.image = viewModel?.brandLogo
         layer.backgroundColor = viewModel?.cardColor.cgColor
         layer.cornerRadius = 10
