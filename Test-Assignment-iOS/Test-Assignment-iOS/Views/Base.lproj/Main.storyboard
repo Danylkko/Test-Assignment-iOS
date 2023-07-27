@@ -38,6 +38,39 @@
             </objects>
             <point key="canvasLocation" x="138" y="5"/>
         </scene>
+        <!--Card View Controller-->
+        <scene sceneID="GjA-x3-xCq">
+            <objects>
+                <viewController id="YDt-an-0Sp" customClass="CardViewController" customModule="Test_Assignment_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlP-Nc-3FI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slY-R0-ubc" customClass="CardView" customModule="Test_Assignment_iOS" customModuleProvider="target">
+                                <rect key="frame" x="46.666666666666657" y="338.66666666666669" width="300" height="200.00000000000006"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="NAW-tx-usV"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="or3-nA-BNf"/>
+                                    <constraint firstAttribute="width" secondItem="slY-R0-ubc" secondAttribute="height" multiplier="3:2" id="vtm-qX-bp0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vQW-L3-Pde"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="slY-R0-ubc" firstAttribute="centerY" secondItem="vQW-L3-Pde" secondAttribute="centerY" id="gIm-kP-Ww2"/>
+                            <constraint firstItem="slY-R0-ubc" firstAttribute="centerX" secondItem="vQW-L3-Pde" secondAttribute="centerX" id="r2v-oh-zUU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="slY-R0-ubc" id="cbN-MC-ymV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whu-15-LYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="5"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

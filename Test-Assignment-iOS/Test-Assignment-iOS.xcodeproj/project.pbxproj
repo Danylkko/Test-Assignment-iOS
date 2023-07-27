@@ -12,6 +12,11 @@
 		79355D892A72D61D00FF18CD /* DebitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D882A72D61D00FF18CD /* DebitCard.swift */; };
 		79355D8C2A72D70F00FF18CD /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D8B2A72D70F00FF18CD /* JSONCoder.swift */; };
 		79355D8E2A72E03D00FF18CD /* FakeCardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D8D2A72E03D00FF18CD /* FakeCardGenerator.swift */; };
+		79355D942A72F19100FF18CD /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79355D932A72F19100FF18CD /* CardView.xib */; };
+		79355D962A72F47300FF18CD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D952A72F47300FF18CD /* CardView.swift */; };
+		79355D982A72F6A600FF18CD /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D972A72F6A600FF18CD /* CardViewModel.swift */; };
+		79355D9A2A72F87600FF18CD /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D992A72F87600FF18CD /* UIColor+Hex.swift */; };
+		79355D9C2A72FCF000FF18CD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D9B2A72FCF000FF18CD /* CardViewController.swift */; };
 		79F2F3002A72C17800801669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F2FF2A72C17800801669 /* AppDelegate.swift */; };
 		79F2F3022A72C17800801669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F3012A72C17800801669 /* SceneDelegate.swift */; };
 		79F2F3042A72C17800801669 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F3032A72C17800801669 /* MainViewController.swift */; };
@@ -29,6 +34,11 @@
 		79355D882A72D61D00FF18CD /* DebitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebitCard.swift; sourceTree = "<group>"; };
 		79355D8B2A72D70F00FF18CD /* JSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCoder.swift; sourceTree = "<group>"; };
 		79355D8D2A72E03D00FF18CD /* FakeCardGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCardGenerator.swift; sourceTree = "<group>"; };
+		79355D932A72F19100FF18CD /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		79355D952A72F47300FF18CD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		79355D972A72F6A600FF18CD /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		79355D992A72F87600FF18CD /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		79355D9B2A72FCF000FF18CD /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		79F2F2FC2A72C17800801669 /* Test-Assignment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Assignment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F2F2FF2A72C17800801669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F2F3012A72C17800801669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +72,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		79355D9D2A72FD6A00FF18CD /* CardViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				79355D9B2A72FCF000FF18CD /* CardViewController.swift */,
+				79355D972A72F6A600FF18CD /* CardViewModel.swift */,
+				79355D952A72F47300FF18CD /* CardView.swift */,
+				79355D932A72F19100FF18CD /* CardView.xib */,
+			);
+			path = CardViewScreen;
+			sourceTree = "<group>";
+		};
 		79F2F2F32A72C17800801669 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +104,7 @@
 			children = (
 				79F2F31B2A72C52900801669 /* AppsLifecycle */,
 				79F2F31A2A72C50B00801669 /* MainScreen */,
+				79355D9D2A72FD6A00FF18CD /* CardViewScreen */,
 				79355D8A2A72D64E00FF18CD /* Models */,
 				79F2F3192A72C4E600801669 /* Utilites */,
 				79F2F31C2A72C54D00801669 /* Views */,
@@ -99,6 +121,7 @@
 				79F2F3132A72C26900801669 /* Coordinator.swift */,
 				79F2F3172A72C32600801669 /* Storyboarded.swift */,
 				79355D8D2A72E03D00FF18CD /* FakeCardGenerator.swift */,
+				79355D992A72F87600FF18CD /* UIColor+Hex.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -191,6 +214,7 @@
 			files = (
 				79F2F30C2A72C17A00801669 /* LaunchScreen.storyboard in Resources */,
 				79F2F3092A72C17A00801669 /* Assets.xcassets in Resources */,
+				79355D942A72F19100FF18CD /* CardView.xib in Resources */,
 				79F2F3072A72C17800801669 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,9 +233,13 @@
 				79F2F3162A72C29B00801669 /* MainCoordinator.swift in Sources */,
 				79355D852A72C71900FF18CD /* MainViewController+UITableViewDelegate.swift in Sources */,
 				79F2F3022A72C17800801669 /* SceneDelegate.swift in Sources */,
+				79355D9A2A72F87600FF18CD /* UIColor+Hex.swift in Sources */,
+				79355D9C2A72FCF000FF18CD /* CardViewController.swift in Sources */,
 				79355D8E2A72E03D00FF18CD /* FakeCardGenerator.swift in Sources */,
+				79355D982A72F6A600FF18CD /* CardViewModel.swift in Sources */,
 				79355D8C2A72D70F00FF18CD /* JSONCoder.swift in Sources */,
 				79F2F3182A72C32600801669 /* Storyboarded.swift in Sources */,
+				79355D962A72F47300FF18CD /* CardView.swift in Sources */,
 				79355D872A72D46300FF18CD /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
