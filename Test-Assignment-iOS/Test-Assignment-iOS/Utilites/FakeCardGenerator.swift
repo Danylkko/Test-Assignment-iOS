@@ -9,7 +9,7 @@ import Foundation
 
 class FakeCardGenerator {
     
-    static func generate() -> Card {
+    static func generate() -> DebitCard {
         let number = generateCardNumber()
         return DebitCard(number: number, date: Date())
     }
