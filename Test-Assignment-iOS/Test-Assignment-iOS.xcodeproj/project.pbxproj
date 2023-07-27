@@ -11,6 +11,7 @@
 		79355D872A72D46300FF18CD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D862A72D46300FF18CD /* Card.swift */; };
 		79355D892A72D61D00FF18CD /* DebitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D882A72D61D00FF18CD /* DebitCard.swift */; };
 		79355D8C2A72D70F00FF18CD /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D8B2A72D70F00FF18CD /* JSONCoder.swift */; };
+		79355D8E2A72E03D00FF18CD /* FakeCardNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79355D8D2A72E03D00FF18CD /* FakeCardNumberGenerator.swift */; };
 		79F2F3002A72C17800801669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F2FF2A72C17800801669 /* AppDelegate.swift */; };
 		79F2F3022A72C17800801669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F3012A72C17800801669 /* SceneDelegate.swift */; };
 		79F2F3042A72C17800801669 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2F3032A72C17800801669 /* MainViewController.swift */; };
@@ -27,6 +28,7 @@
 		79355D862A72D46300FF18CD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		79355D882A72D61D00FF18CD /* DebitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebitCard.swift; sourceTree = "<group>"; };
 		79355D8B2A72D70F00FF18CD /* JSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCoder.swift; sourceTree = "<group>"; };
+		79355D8D2A72E03D00FF18CD /* FakeCardNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCardNumberGenerator.swift; sourceTree = "<group>"; };
 		79F2F2FC2A72C17800801669 /* Test-Assignment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Assignment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F2F2FF2A72C17800801669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F2F3012A72C17800801669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				79355D882A72D61D00FF18CD /* DebitCard.swift */,
-				79355D8B2A72D70F00FF18CD /* JSONCoder.swift */,
+				79355D862A72D46300FF18CD /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,9 +95,10 @@
 		79F2F3192A72C4E600801669 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				79355D8B2A72D70F00FF18CD /* JSONCoder.swift */,
 				79F2F3132A72C26900801669 /* Coordinator.swift */,
 				79F2F3172A72C32600801669 /* Storyboarded.swift */,
-				79355D862A72D46300FF18CD /* Card.swift */,
+				79355D8D2A72E03D00FF18CD /* FakeCardNumberGenerator.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				79F2F3162A72C29B00801669 /* MainCoordinator.swift in Sources */,
 				79355D852A72C71900FF18CD /* MainViewController+UITableViewDelegate.swift in Sources */,
 				79F2F3022A72C17800801669 /* SceneDelegate.swift in Sources */,
+				79355D8E2A72E03D00FF18CD /* FakeCardNumberGenerator.swift in Sources */,
 				79355D8C2A72D70F00FF18CD /* JSONCoder.swift in Sources */,
 				79F2F3182A72C32600801669 /* Storyboarded.swift in Sources */,
 				79355D872A72D46300FF18CD /* Card.swift in Sources */,
