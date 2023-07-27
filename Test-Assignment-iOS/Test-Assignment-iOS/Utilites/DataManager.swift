@@ -7,7 +7,7 @@
 
 import Foundation
 import KeychainSwift
-import Combine
+import RxSwift
 
 class DataManager {
     
@@ -15,29 +15,32 @@ class DataManager {
     private let keychain = KeychainSwift()
     private let key = "MyDebitCards"
     
-    let output = CurrentValueSubject<[DebitCard], Never>([])
-    let addRecord = PassthroughSubject<DebitCard, Never>()
-    let fetchRecords = PassthroughSubject<Void, Never>()
-    private var cn = Set<AnyCancellable>()
+    let output = PublishSubject<[DebitCard]>()
+    let addRecord = PublishSubject<DebitCard>()
+    let fetchRecords = PublishSubject<Void>()
+    private var disposeBag = DisposeBag()
     
     init() {
-        addRecord
-            .sink { [weak self] card in
+        addRecord.subscribe(
+            onNext: { [weak self] card in
                 var cards = self?.retrieve()
                 cards?.append(card)
                 if let cards = cards {
                     self?.store(cards: cards)
-                    self?.fetchRecords.send()
+                    self?.fetchRecords.onNext(())
                 }
-            }.store(in: &cn)
+            }
+        ).disposed(by: disposeBag)
         
         fetchRecords
             .compactMap { [weak self] in
                 self?.retrieve()
             }
-            .sink { [weak self] cards in
-                self?.output.send(cards.sorted { $0.date > $1.date })
-            }.store(in: &cn)
+            .subscribe(
+                onNext: { [weak self] cards in
+                    self?.output.onNext(cards.sorted { $0.date > $1.date })
+                })
+            .disposed(by: disposeBag)
     }
     
     func store(cards: [DebitCard]) {

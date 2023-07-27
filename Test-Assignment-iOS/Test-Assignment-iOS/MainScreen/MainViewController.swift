@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Combine
+import RxSwift
 
 class MainViewController: UIViewController, Storyboarded {
     
@@ -17,7 +17,7 @@ class MainViewController: UIViewController, Storyboarded {
     
     var onNavigationBarButtonTap: (() -> Void)?
     
-    private var cn = Set<AnyCancellable>()
+    private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +31,16 @@ class MainViewController: UIViewController, Storyboarded {
         DataManager
             .shared
             .output
-            .sink { [weak self] cards in
+            .subscribe { [weak self] cards in
                 self?.cards = cards
                 self?.cardsTableView.reloadData()
-            }.store(in: &cn)
-        DataManager.shared.fetchRecords.send()
+            }.disposed(by: disposeBag)
+        DataManager.shared.fetchRecords.onNext(())
     }
     
     private func configureToolbar() {
         var navBarButton: UIBarButtonItem?
-        if let addButtonImage = UIImage(systemName: "plus") {
+        if let addButtonImage = UIImage(named: "plus") {
             navBarButton = UIBarButtonItem(image: addButtonImage,
                                            style: .plain,
                                            target: self,
@@ -60,7 +60,7 @@ class MainViewController: UIViewController, Storyboarded {
         onNavigationBarButtonTap?()
         let fakeCard = FakeCardGenerator.generate()
         DataManager.shared
-            .addRecord.send(fakeCard)
+            .addRecord.onNext(fakeCard)
     }
     
 }
