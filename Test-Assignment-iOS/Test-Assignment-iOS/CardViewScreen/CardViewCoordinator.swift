@@ -13,13 +13,18 @@ class CardViewCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     
     var navigationController: UINavigationController
+    var card: DebitCard
     
-    init(navigationController: UINavigationController) {
+    init(card: DebitCard, navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.card = card
     }
     
     func start() {
-        
+        let vc = CardViewController.instantiate()
+        let vm = CardViewModel(card: card)
+        vc.cardView = CardView(viewModel: vm)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func childDidFinish(_ child: Coordinator?) {

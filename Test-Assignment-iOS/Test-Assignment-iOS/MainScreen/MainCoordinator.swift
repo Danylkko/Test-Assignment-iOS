@@ -28,10 +28,11 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
     
     func showCardDetail(card: DebitCard) {
-        let vm = CardViewModel(card: card)
-        let detailVC = CardViewController.instantiate()
-        detailVC.cardView = CardView(viewModel: vm)
-        navigationController.pushViewController(detailVC, animated: true)
+        let child = CardViewCoordinator(card: card,
+                                        navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
     }
     
 }
