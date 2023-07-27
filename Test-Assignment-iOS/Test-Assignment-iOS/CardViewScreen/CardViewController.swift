@@ -7,7 +7,9 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+class CardViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: CardViewCoordinator?
     
     @IBOutlet weak private var cardViewContainer: UIView!
     var cardView: CardView?
@@ -16,6 +18,7 @@ class CardViewController: UIViewController {
         super.viewDidLoad()
         if let cardView = cardView {
             cardView.frame = cardViewContainer.bounds
+            cardView.layoutIfNeeded()
             cardViewContainer.addSubview(cardView)
         }
     }

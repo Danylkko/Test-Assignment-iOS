@@ -37,6 +37,8 @@ class CardView: UIView {
         bankNameLabel.text = viewModel?.bankName
         cardNumberLabel.text = viewModel?.cardNumber
         brandLogoView.image = viewModel?.brandLogo
+        layer.backgroundColor = viewModel?.cardColor.cgColor
+        layer.cornerRadius = 10
     }
     
     @IBOutlet weak var bankNameLabel: UILabel!

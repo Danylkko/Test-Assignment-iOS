@@ -15,21 +15,23 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-
+    
     func start() {
         navigationController.delegate = self
         let vc = MainViewController.instantiate()
         vc.coordinator = self
-        
-        vc.onNavigationBarButtonTap = { [weak self] in
-            
-        }
-        
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func showCardDetail(card: DebitCard) {
+        let vm = CardViewModel(card: card)
+        let detailVC = CardViewController.instantiate()
+        detailVC.cardView = CardView(viewModel: vm)
+        navigationController.pushViewController(detailVC, animated: true)
     }
     
 }

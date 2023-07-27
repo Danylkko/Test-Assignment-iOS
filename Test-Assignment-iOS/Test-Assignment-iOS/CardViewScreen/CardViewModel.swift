@@ -44,9 +44,9 @@ class CardViewModel {
     var cardColor: UIColor {
         switch card.brand {
         case .mastercard:
-            return UIColor(hex: "#faaa13")!
+            return UIColor(hex: "#faaa13")
         case .visa:
-            return UIColor(hex: "#222222")!
+            return UIColor(hex: "#222222")
         default:
             return .clear
         }

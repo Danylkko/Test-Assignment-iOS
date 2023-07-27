@@ -51,7 +51,7 @@
         <!--Card View Controller-->
         <scene sceneID="GjA-x3-xCq">
             <objects>
-                <viewController id="YDt-an-0Sp" customClass="CardViewController" customModule="Test_Assignment_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardViewController" id="YDt-an-0Sp" customClass="CardViewController" customModule="Test_Assignment_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hlP-Nc-3FI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

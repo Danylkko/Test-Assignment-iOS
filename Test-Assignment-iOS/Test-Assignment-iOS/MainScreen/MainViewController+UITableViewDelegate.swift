@@ -13,6 +13,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return cards.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let card = cards[indexPath.row]
+        coordinator?.showCardDetail(card: card)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseId, for: indexPath) as! CardTableViewCell
         let model = cards[indexPath.row]
