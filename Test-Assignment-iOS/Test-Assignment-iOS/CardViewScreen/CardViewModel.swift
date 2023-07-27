@@ -17,7 +17,10 @@ class CardViewModel {
     }
     
     var cardNumber: String {
-        let masked = String(repeating: "*", count: 12)
+        var masked = String()
+        for _ in 0..<3 {
+            masked.append("**** ")
+        }
         let last4 = card.number.suffix(4)
         return masked + last4
     }
