@@ -16,5 +16,12 @@ class CardViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    func loadCardView(vm: CardViewModel) {
+        let cardView = CardView()
+        cardView.viewModel = vm
+        cardView.frame = cardViewContainer.bounds
+        cardViewContainer.addSubview(cardView)
+    }
 
 }
