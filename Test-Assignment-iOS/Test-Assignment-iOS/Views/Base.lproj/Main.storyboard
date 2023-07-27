@@ -46,7 +46,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slY-R0-ubc" customClass="CardView" customModule="Test_Assignment_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slY-R0-ubc">
                                 <rect key="frame" x="46.666666666666657" y="338.66666666666669" width="300" height="200.00000000000006"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -64,7 +64,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cardView" destination="slY-R0-ubc" id="cbN-MC-ymV"/>
+                        <outlet property="cardViewContainer" destination="slY-R0-ubc" id="cbN-MC-ymV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whu-15-LYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

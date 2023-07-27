@@ -10,7 +10,27 @@ import UIKit
 class CardView: UIView {
     
     var viewModel: CardViewModel?
-
+    
+    init(viewModel: CardViewModel? = nil) {
+        super.init(frame: .zero)
+        self.viewModel = viewModel
+        loadNib()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    @discardableResult
+    private func loadNib() -> UIView {
+        guard let view = Bundle.main.loadNibNamed("CardView", owner: self)?.first as? UIView else {
+            fatalError("Cannot load CardView nib")
+        }
+        view.frame = bounds
+        addSubview(view)
+        return view
+    }
+    
     override func draw(_ rect: CGRect) {
         // Drawing code
         bankNameLabel.text = viewModel?.bankName
