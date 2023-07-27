@@ -10,18 +10,14 @@ import UIKit
 class CardViewController: UIViewController {
     
     @IBOutlet weak private var cardViewContainer: UIView!
+    var cardView: CardView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        if let cardView = cardView {
+            cardView.frame = cardViewContainer.bounds
+            cardViewContainer.addSubview(cardView)
+        }
     }
     
-    func loadCardView(vm: CardViewModel) {
-        let cardView = CardView()
-        cardView.viewModel = vm
-        cardView.frame = cardViewContainer.bounds
-        cardViewContainer.addSubview(cardView)
-    }
-
 }

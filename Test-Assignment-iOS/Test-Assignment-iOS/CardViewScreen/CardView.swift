@@ -19,6 +19,7 @@ class CardView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        loadNib()
     }
     
     @discardableResult
