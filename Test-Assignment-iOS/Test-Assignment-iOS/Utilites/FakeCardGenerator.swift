@@ -1,5 +1,5 @@
 //
-//  FakeCardNumberGenerator.swift
+//  FakeCardGenerator.swift
 //  Test-Assignment-iOS
 //
 //  Created by Danylo Litvinchuk on 27.07.2023.
@@ -7,15 +7,20 @@
 
 import Foundation
 
-class FakeCardNumberGenerator {
+class FakeCardGenerator {
     
-    static func generate() -> String {
-        let types: [DebitCard.Brand] = [.visa, .mastercard]
-        let randomType = types.randomElement()!
-        return generate(type: randomType)
+    static func generate() -> Card {
+        let number = generateCardNumber()
+        return DebitCard(number: number, date: Date())
     }
     
-    static func generate(type: DebitCard.Brand) -> String {
+    static func generateCardNumber() -> String {
+        let types: [DebitCard.Brand] = [.visa, .mastercard]
+        let randomType = types.randomElement()!
+        return generateCardNumber(type: randomType)
+    }
+    
+    static func generateCardNumber(type: DebitCard.Brand) -> String {
         let prefix: String
         let length: Int = 16
         
