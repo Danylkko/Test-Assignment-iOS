@@ -9,9 +9,9 @@ import Foundation
 
 class JSONCoder {
     
-    static func encode<T: Codable>(_ object: T) throws -> String {
+    static func encode<T: Codable>(_ objects: [T]) throws -> String {
         let encoder = JSONEncoder()
-        let data = try encoder.encode(object)
+        let data = try encoder.encode(objects)
         guard let jsonString = String(data: data, encoding: .utf8) else {
             // TODO: - make prettier
             fatalError()
@@ -19,13 +19,13 @@ class JSONCoder {
         return jsonString
     }
     
-    static func decode<T: Codable>(_ jsonString: String) throws -> T {
+    static func decode<T: Codable>(_ jsonString: String) throws -> [T] {
         let decoder = JSONDecoder()
         guard let data = jsonString.data(using: .utf8) else {
             // TODO: - make prettier
             fatalError()
         }
-        let object = try decoder.decode(T.self, from: data)
+        let object = try decoder.decode([T].self, from: data)
         return object
     }
 }
