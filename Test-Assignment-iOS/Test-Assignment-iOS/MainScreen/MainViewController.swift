@@ -24,6 +24,7 @@ class MainViewController: UIViewController, Storyboarded {
         title = "Картки"
         cardsTableView.delegate = self
         cardsTableView.dataSource = self
+        cardsTableView.separatorStyle = .none
         let nib = UINib(nibName: "CardTableViewCell", bundle: nil)
         cardsTableView.register(nib, forCellReuseIdentifier: CardTableViewCell.reuseId)
         

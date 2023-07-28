@@ -44,16 +44,29 @@ class DataManager {
     }
     
     func store(cards: [DebitCard]) {
-        if let jsonString = try? JSONCoder.encode(cards) {
+        do {
+            let jsonString = try JSONCoder.encode(cards, encoding: .utf8)
             keychain.set(jsonString, forKey: key)
+        } catch {
+            if let error = error as? JSONCoder.Error {
+                print(error.descripion)
+            }
+            print(error)
         }
     }
     
     func retrieve() -> [DebitCard] {
-        if let jsonString = keychain.get(key),
-           let cards: [DebitCard] = try? JSONCoder.decode(jsonString) {
+        do {
+            guard let jsonString = keychain.get(key) else { return [] }
+            let cards: [DebitCard] = try JSONCoder.decode(jsonString, encoding: .utf8)
             return cards
+        } catch {
+            if let error = error as? JSONCoder.Error {
+                print(error.descripion)
+            } else {
+                print(error)
+            }
+            return []
         }
-        return []
     }
 }
